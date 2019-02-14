@@ -1,0 +1,2 @@
+module GymsitesHelper
+end

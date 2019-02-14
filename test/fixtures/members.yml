@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  password_digest: MyString
+  gymsite: one
+  first_name: MyString
+  last_name: MyString
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  birthday: 2019-02-13
+  is_active: false
+  avatar: MyString
+  notes: MyText
+  from_date: 2019-02-13
+  to_date: 2019-02-13
+  level: 1
+  membership_type: 1
+  membership_price: 9.99
+  source: 1
+
+two:
+  email: MyString
+  password_digest: MyString
+  gymsite: two
+  first_name: MyString
+  last_name: MyString
+  street_address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  phone: MyString
+  birthday: 2019-02-13
+  is_active: false
+  avatar: MyString
+  notes: MyText
+  from_date: 2019-02-13
+  to_date: 2019-02-13
+  level: 1
+  membership_type: 1
+  membership_price: 9.99
+  source: 1
