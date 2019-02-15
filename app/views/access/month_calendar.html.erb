@@ -1,0 +1,12 @@
+<%= month_calendar do |date| %>
+<%= date.day %>
+<% end %>
+
+<%= week_calendar number_of_weeks: 2 do |date| %>
+  <%= date.day %>
+<% end %>
+<% mydate = Date.new(2019-01-01) %>
+
+<%= month_calendar start_date_param: :my_date do |date| %>
+  <%= date.day %>
+<% end %>

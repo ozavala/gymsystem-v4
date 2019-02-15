@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :schedules
   root 'access#menu'
   get 'access/menu'
   get 'access/blog'
+  get 'access/month_calendar'
 
   namespace :admin do
       resources :users
