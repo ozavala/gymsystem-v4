@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
+  resources :trainers
   resources :schedules
   root 'access#menu'
   get 'access/menu'
   get 'access/blog'
-  get 'access/month_calendar'
+  get 'access/week_calendar'
 
   namespace :admin do
       resources :users
       resources :gymsites
       resources :members
+      resources :trainers
+      resources :schedules
 
       root to: "users#index"
     end

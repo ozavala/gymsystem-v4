@@ -10,7 +10,7 @@ class MemberDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     gymsite: Field::BelongsTo,
     id: Field::Number,
-    email: Field::String,
+    email: Field::Email,
     password_digest: Field::String,
     first_name: Field::String,
     last_name: Field::String,

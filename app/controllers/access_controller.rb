@@ -7,5 +7,9 @@ class AccessController < ApplicationController
   end
 
   def gl_accounting
-  end 
+  end
+
+  def week_calendar
+      @schedules = Schedule.all
+  end
 end

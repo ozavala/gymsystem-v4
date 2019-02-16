@@ -8,9 +8,11 @@ class UserDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    gymsite: Field::BelongsTo,
+    gymsite: Field::BelongsTo.with_options(
+    searchable: true, searchable_field: :name,
+    ),
     id: Field::Number,
-    email: Field::String,
+    email: Field::Email,
     encrypted_password: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_150306) do
+ActiveRecord::Schema.define(version: 2019_02_16_020109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,11 +61,25 @@ ActiveRecord::Schema.define(version: 2019_02_15_150306) do
   end
 
   create_table "schedules", force: :cascade do |t|
+    t.bigint "gymsite_id"
+    t.bigint "trainer_id"
     t.string "name"
     t.datetime "start_time"
     t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["gymsite_id"], name: "index_schedules_on_gymsite_id"
+    t.index ["trainer_id"], name: "index_schedules_on_trainer_id"
+  end
+
+  create_table "trainers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "skill"
+    t.text "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email"
   end
 
   create_table "users", force: :cascade do |t|
@@ -88,5 +102,7 @@ ActiveRecord::Schema.define(version: 2019_02_15_150306) do
   end
 
   add_foreign_key "members", "gymsites"
+  add_foreign_key "schedules", "gymsites"
+  add_foreign_key "schedules", "trainers"
   add_foreign_key "users", "gymsites"
 end
