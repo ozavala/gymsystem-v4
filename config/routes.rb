@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :member_payments
+  resources :billing_accounts
+  resources :gl_accounts
   resources :trainers
   resources :schedules
   root 'access#menu'

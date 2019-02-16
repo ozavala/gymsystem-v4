@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_date: 2019-02-16
+  to_date: 2019-02-16
+  period_type: one
+  gymsite: one
+
+two:
+  from_date: 2019-02-16
+  to_date: 2019-02-16
+  period_type: two
+  gymsite: two

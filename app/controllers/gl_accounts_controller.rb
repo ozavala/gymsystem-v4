@@ -1,0 +1,2 @@
+class GlAccountsController < ApplicationController
+end

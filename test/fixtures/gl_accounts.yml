@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  acc_code: MyString
+  acc_parent_code: MyString
+  name: MyString
+  description: MyString
+  account_type: one
+
+two:
+  acc_code: MyString
+  acc_parent_code: MyString
+  name: MyString
+  description: MyString
+  account_type: two

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  balance: MyString
+  status: 1
+  member: one
+  payment_due_date: MyString
+  gl_account: one
+
+two:
+  balance: MyString
+  status: 1
+  member: two
+  payment_due_date: MyString
+  gl_account: two
