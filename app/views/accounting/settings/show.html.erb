@@ -1,0 +1,8 @@
+<h3> Show Company Setting </h3>
+
+<%= form_with url: accounting_company_path(@party) do |form|  %>
+<%= form.label :name %>
+<%= form.text_field :name %>
+<%= form.select(:party_type, [ 'ORG','PER' ], {}, { class: 'my_style_class' }) %>
+<%= form.submit %>
+<% end %>

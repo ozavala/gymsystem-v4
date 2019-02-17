@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   get 'access/blog'
   get 'access/week_calendar'
   get 'access/month_calendar'
+  get 'reports/gl_accounts_list'
+  get 'access/reports/index'
+  get 'accounting/reports/index'
+  namespace :accounting do
+    resource :reports
+    resource :settings
+  end
 
   namespace :admin do
       resources :users
@@ -22,9 +29,16 @@ Rails.application.routes.draw do
       resources :gl_accounts
       resources :account_types
       resources :billing_accounts
+      resources :member_payments
 
       root to: "users#index"
     end
+
+    namespace :settings do
+    resource :gymsites, only: [:edit, :update]
+    resource :members, only: [:edit, :update], as: 'member'
+    resources :users, except: [:show]
+  end
   resources :members
   devise_for :users
   resources :gymsites

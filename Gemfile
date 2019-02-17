@@ -77,3 +77,5 @@ gem 'administrate-field-enumerize', '~> 1.0'
 gem "simple_calendar", "~> 2.0"
 gem 'administrate-field-belongs_to_search'
 gem 'administrate-field-type'
+gem 'prawn', '~> 2.2', '>= 2.2.2'
+gem 'prawn-table', '~> 0.2.2'

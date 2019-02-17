@@ -1,0 +1,26 @@
+<div class = 'container-fluid'>
+  <div class= 'row'>
+    <div class= 'col-sm-3'></div>
+    <div class = 'col-sm-6'>
+      <h3> Accounting Settings </h3>
+      <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-info" %>
+      <% end %>
+      <ul>
+
+        <li><%= link_to 'Setting the Gym Site',edit_settings_gymsites_path %></li>
+        <li><a href='#'>Edit General Ledger Accounts</a></li>
+        <table>
+          <tr>
+            <td><a href="#">Make Chart of Accounts - html  <%GlAccountsHelper::create_chart_of_accounts_html%></a></td>
+            <td><%=link_to 'Chart of Accounts List',reports_gl_accounts_list_path %></td>
+              <td><%= link_to "Printable Chart of Accounts (PDF)", accounting_reports_index_path( format: 'pdf') %></td>
+          </tr>
+        </table>
+          <li><a href='#'>Edit General Ledger Accounts</a></li>
+          <li><a href='#'>Edit General Ledger Accounts</a></li>
+        </ul>
+      </div>
+      <div class= 'col-sm-3'></div>
+    </div>
+  </div>

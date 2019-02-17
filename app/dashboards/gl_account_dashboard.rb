@@ -1,6 +1,10 @@
 require "administrate/base_dashboard"
 
 class GlAccountDashboard < Administrate::BaseDashboard
+  def display_resource(gl_account)
+    gl_account.acc_code 
+  end
+
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #

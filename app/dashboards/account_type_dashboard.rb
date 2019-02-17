@@ -45,7 +45,6 @@ class AccountTypeDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :gl_accounts,
     :acc_type_code,
     :classification,
   ].freeze
