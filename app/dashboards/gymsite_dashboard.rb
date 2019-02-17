@@ -1,6 +1,9 @@
 require "administrate/base_dashboard"
 
 class GymsiteDashboard < Administrate::BaseDashboard
+  def display_resource(gymsite)
+    gymsite.name
+  end
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -20,10 +23,7 @@ class GymsiteDashboard < Administrate::BaseDashboard
     logo: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    members: Field::HasMany.with_options(
-   scope: lambda {member}),
-    users: Field::HasMany.with_options(
-   scope: lambda {user})
+
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -52,8 +52,6 @@ class GymsiteDashboard < Administrate::BaseDashboard
     :phone,
     :email,
     :logo,
-    :members,
-    :users,
     :created_at,
     :updated_at,
   ].freeze
@@ -71,7 +69,6 @@ class GymsiteDashboard < Administrate::BaseDashboard
     :phone,
     :email,
     :logo,
-    :members
   ].freeze
 
   # Overwrite this method to customize how gymsites are displayed

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visit_date: MyString
+  start_time: 2019-02-16 14:21:48
+  end_time: MyString
+  datetime: MyString
+  member: one
+  gymsite: one
+
+two:
+  visit_date: MyString
+  start_time: 2019-02-16 14:21:48
+  end_time: MyString
+  datetime: MyString
+  member: two
+  gymsite: two

@@ -3,11 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .simple-calendar {
+  padding-left: 50px;
+  padding-right: 50px;
   .day {
     width: 200px;
     height: 200px;
     font-size: 10px;
-    padding: 0px; 
+    padding: 0px;
   }
 
   .wday-0 {}

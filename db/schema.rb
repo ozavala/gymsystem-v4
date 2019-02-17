@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_16_151318) do
+ActiveRecord::Schema.define(version: 2019_02_16_192639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,36 @@ ActiveRecord::Schema.define(version: 2019_02_16_151318) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "invoice_items", force: :cascade do |t|
+    t.integer "transaction_id"
+    t.integer "invoice_item_seq"
+    t.integer "taxable_flag"
+    t.decimal "quantity"
+    t.decimal "unit_price", precision: 20, scale: 2
+    t.string "item_description"
+    t.bigint "product_id"
+    t.bigint "invoice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["invoice_id"], name: "index_invoice_items_on_invoice_id"
+    t.index ["product_id"], name: "index_invoice_items_on_product_id"
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.string "authorization_code"
+    t.string "autorization_no"
+    t.date "transaction_date"
+    t.date "invoice_date"
+    t.decimal "amount", precision: 20, scale: 2
+    t.bigint "gymsite_id"
+    t.bigint "member_id"
+    t.integer "invoice_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gymsite_id"], name: "index_invoices_on_gymsite_id"
+    t.index ["member_id"], name: "index_invoices_on_member_id"
+  end
+
   create_table "member_payments", force: :cascade do |t|
     t.date "due_date"
     t.date "payment_date"
@@ -133,6 +163,16 @@ ActiveRecord::Schema.define(version: 2019_02_16_151318) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.string "bar_code"
+    t.string "internal_code"
+    t.integer "product_category"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "schedules", force: :cascade do |t|
     t.bigint "gymsite_id"
     t.bigint "trainer_id"
@@ -145,6 +185,15 @@ ActiveRecord::Schema.define(version: 2019_02_16_151318) do
     t.index ["trainer_id"], name: "index_schedules_on_trainer_id"
   end
 
+  create_table "taxes_dues", force: :cascade do |t|
+    t.string "description"
+    t.decimal "amount", precision: 20, scale: 2
+    t.bigint "invoice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["invoice_id"], name: "index_taxes_dues_on_invoice_id"
+  end
+
   create_table "trainers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -153,6 +202,20 @@ ActiveRecord::Schema.define(version: 2019_02_16_151318) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
+    t.bigint "gymsite_id"
+    t.index ["gymsite_id"], name: "index_trainers_on_gymsite_id"
+  end
+
+  create_table "training_sessions", force: :cascade do |t|
+    t.date "visit_date"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.bigint "member_id"
+    t.bigint "gymsite_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gymsite_id"], name: "index_training_sessions_on_gymsite_id"
+    t.index ["member_id"], name: "index_training_sessions_on_member_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -174,11 +237,29 @@ ActiveRecord::Schema.define(version: 2019_02_16_151318) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "work_outs", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "repetions"
+    t.decimal "weight"
+    t.decimal "distance"
+    t.decimal "speed"
+    t.datetime "span"
+    t.bigint "training_session_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["training_session_id"], name: "index_work_outs_on_training_session_id"
+  end
+
   add_foreign_key "account_periods", "gymsites"
   add_foreign_key "account_periods", "period_types"
   add_foreign_key "billing_accounts", "gl_accounts"
   add_foreign_key "billing_accounts", "members"
   add_foreign_key "gl_accounts", "account_types"
+  add_foreign_key "invoice_items", "invoices"
+  add_foreign_key "invoice_items", "products"
+  add_foreign_key "invoices", "gymsites"
+  add_foreign_key "invoices", "members"
   add_foreign_key "member_payments", "billing_accounts"
   add_foreign_key "members", "gymsites"
   add_foreign_key "organization_accounts", "account_periods"
@@ -186,5 +267,10 @@ ActiveRecord::Schema.define(version: 2019_02_16_151318) do
   add_foreign_key "organization_accounts", "gymsites"
   add_foreign_key "schedules", "gymsites"
   add_foreign_key "schedules", "trainers"
+  add_foreign_key "taxes_dues", "invoices"
+  add_foreign_key "trainers", "gymsites"
+  add_foreign_key "training_sessions", "gymsites"
+  add_foreign_key "training_sessions", "members"
   add_foreign_key "users", "gymsites"
+  add_foreign_key "work_outs", "training_sessions"
 end

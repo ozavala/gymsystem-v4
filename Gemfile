@@ -75,3 +75,5 @@ gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
 gem 'enumerize', '~> 2.2', '>= 2.2.2'
 gem 'administrate-field-enumerize', '~> 1.0'
 gem "simple_calendar", "~> 2.0"
+gem 'administrate-field-belongs_to_search'
+gem 'administrate-field-type'

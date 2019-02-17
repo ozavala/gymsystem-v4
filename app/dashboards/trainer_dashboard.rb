@@ -1,6 +1,9 @@
 require "administrate/base_dashboard"
 
 class TrainerDashboard < Administrate::BaseDashboard
+  def display_resource(trainer)
+    "#{trainer.first_name} #{trainer.last_name}"
+  end
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,6 +12,7 @@ class TrainerDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    gymsite: Field::BelongsTo,
     first_name: Field::String,
     last_name: Field::String,
     email: Field::Email,
@@ -44,6 +48,7 @@ class TrainerDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :gymsite,
     :first_name,
     :last_name,
     :email,
