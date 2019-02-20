@@ -4,6 +4,7 @@ class ScheduleDashboard < Administrate::BaseDashboard
     ATTRIBUTE_TYPES = {
       gymsite: Field::BelongsTo,
       trainer: Field::BelongsTo,
+      member: Field::BelongsTo,
       name: Field::String,
       start_time: Field::DateTime,
       end_time: Field::DateTime

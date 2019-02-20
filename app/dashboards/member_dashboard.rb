@@ -1,9 +1,13 @@
 require "administrate/base_dashboard"
 
 class MemberDashboard < Administrate::BaseDashboard
+  def display_resource(member)
+    "#{member.first_name} #{member.last_name}"
+  end
+  
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
-  #
+
   # Each different type represents an Administrate::Field object,
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
@@ -11,7 +15,7 @@ class MemberDashboard < Administrate::BaseDashboard
     gymsite: Field::BelongsTo,
     id: Field::Number,
     email: Field::Email,
-    password_digest: Field::String,
+    password_digest: Field::Password,
     first_name: Field::String,
     last_name: Field::String,
     street_address: Field::String,
@@ -49,6 +53,7 @@ class MemberDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+
     :gymsite,
     :id,
     :email,
@@ -78,6 +83,7 @@ class MemberDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+
     :gymsite,
     :email,
     :password_digest,

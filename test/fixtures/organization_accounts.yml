@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_date: 2019-02-16
+  to_date: 2019-02-16
+  gymsite: one
+  gl_account: one
+  account_period: one
+
+two:
+  from_date: 2019-02-16
+  to_date: 2019-02-16
+  gymsite: two
+  gl_account: two
+  account_period: two

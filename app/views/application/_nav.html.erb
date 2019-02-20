@@ -4,8 +4,7 @@
     <span class= "navbar-link">
       <% if user_signed_in? && current_user.is_admin?%>
       <%= link_to "Admin Dash Board", admin_users_path %>
-    <!-- link_to 'General Ledger', accounting_reports_path %> -->
-
+     <%=link_to 'General Ledger', accounting_reports_index_path %>
       <% end %>
     </span>
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

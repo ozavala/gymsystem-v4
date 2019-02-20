@@ -22,7 +22,7 @@ class CreateMembers < ActiveRecord::Migration[5.2]
       t.decimal :membership_price
       t.integer :source
 
-      t.timestamps
+      t.timestamps 
     end
   end
 end
