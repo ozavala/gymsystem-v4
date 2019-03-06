@@ -4,11 +4,15 @@ module GlAccountsHelper
     glacs = GlAccount.order(:acc_code).all
 
       chart_file.puts(
-        '<div>
-          <h1>General Ledger Chart of Accounts</h1>
-        </div>')
+        "<div class = 'container'>
+          <h1>General Ledger Chart of Accounts</h1>")
+
         chart_file.puts(
-          "<table>
+          "<div class='row'>
+          <div class = 'col-md-1'>
+          </div>
+          <div class='col-md-10'>
+          <table>
             <tr>
               <th>ID</th>
               <th>Code</th>
@@ -20,14 +24,14 @@ module GlAccountsHelper
         glacs.each do |gla|
           chart_file.puts(
           "<tr>
-             <td>#{gla.id}</td>
-             <td>#{gla.acc_code}</td>
+             <td>#{gla.id   }   </td>
+             <td>  #{  gla.acc_code}</td>
              <td>#{gla.name}</td>
              <td>#{gla.account_type_id}</td>
              <td>#{gla.description}</td>
           </tr>")
         end
-    chart_file.puts('</table>')
+    chart_file.puts('</table></div></div></div>')
     chart_file.close
   end
 end

@@ -8,8 +8,8 @@
       <% end %>
 
         <table>
-        <tr><td><%= link_to 'Setting the Gym Site',edit_settings_gymsites_path %></td></tr>
-        <tr><td><a href='#'>Enter Accounts To The Chart Of Accounts</a></td></tr>
+        <tr><td><%= link_to 'Edit the Gym Site',edit_settings_gymsites_path %></td></tr>
+        <tr><td><%= link_to 'Edit Chart Of Accounts', new_gl_account_path %></td></tr>
 
           <tr>
             <td><a href="#">Make Chart of Accounts - html  <%GlAccountsHelper::create_chart_of_accounts_html%></a></td>

@@ -21,6 +21,6 @@ module Settings
       params.require(:gymsite).permit(:name, :description, :legal_id, :logo, :street_address, :city, :state, :country, :zip, :email, :phone, :admin_id, :owner_id, :from_date, :to_date)
     end
 
-    
+
   end
 end

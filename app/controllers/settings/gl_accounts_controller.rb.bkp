@@ -1,3 +1,4 @@
+module Settings
   class GlAccountsController < ApplicationController
 
     def new
@@ -21,6 +22,7 @@
 
     def create
       @gl_account = GlAccount.new(gl_account_params)
+
       respond_to do |format|
         if @gl_account.save
           format.html { redirect_to accounting_reports_index_path, notice: 'Gl Account was successfully created.' }
@@ -35,3 +37,4 @@
   def gl_account_params
     params.require(:gl_account).permit(:acc_code, :acc_parent_code, :name, :description, :account_type_id)
   end
+end

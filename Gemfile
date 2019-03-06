@@ -48,6 +48,27 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # custom
+  gem 'bootstrap-sass', '~> 3.4.1'
+  gem 'sassc-rails', '>= 2.1.0'
+  gem 'jquery-rails'
+  gem 'devise', '~> 4.5'
+  gem 'simple_form'
+  gem 'administrate', '~> 0.11.0'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+  gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails', :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
+  # gem 'administrate-field-enum'
+  #gem 'enumerate_it'
+  gem 'enumerize', '~> 2.2', '>= 2.2.2'
+  gem 'administrate-field-enumerize', '~> 1.0'
+  gem "simple_calendar", "~> 2.0"
+  gem 'administrate-field-belongs_to_search'
+  gem 'administrate-field-type'
+  gem 'prawn', '~> 2.2', '>= 2.2.2'
+  gem 'prawn-table', '~> 0.2.2'
+  gem 'rails-erd', '~> 1.5', '>= 1.5.2'
+  gem 'annotate'
 end
 
 group :test do
@@ -60,22 +81,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
-gem 'jquery-rails'
-gem 'devise', '~> 4.5'
-gem 'simple_form'
-gem 'administrate', '~> 0.11.0'
-gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
-
-gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
-                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
-# gem 'administrate-field-enum'
-#gem 'enumerate_it'
-gem 'enumerize', '~> 2.2', '>= 2.2.2'
-gem 'administrate-field-enumerize', '~> 1.0'
-gem "simple_calendar", "~> 2.0"
-gem 'administrate-field-belongs_to_search'
-gem 'administrate-field-type'
-gem 'prawn', '~> 2.2', '>= 2.2.2'
-gem 'prawn-table', '~> 0.2.2'

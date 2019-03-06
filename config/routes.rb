@@ -35,9 +35,11 @@ Rails.application.routes.draw do
     end
 
     namespace :settings do
-    resource :gymsites, only: [:edit, :update]
-    resource :members, only: [:edit, :update], as: 'member'
-    resources :users, except: [:show]
+      resources :gl_accounts
+      resource :gymsites, only: [:edit, :update]
+
+      resource :members, only: [:edit, :update], as: 'member'
+      resource :users, except: [:show]
   end
   resources :members
   devise_for :users
