@@ -13,9 +13,11 @@
 <%= f.input :first_name,label: 'Nombres' %>
 <%= f.input :last_name,label: 'Apellidos' %>
 <%= f.input :email,label: 'Email' %>
-
 <%= f.input :password_digest,label: 'Código' %>
 <%= f.hint 'Mínimo 6 caracteres'%>
+<%= f.input :birthday, as: :date, start_year: Date.today.year - 80,
+                              end_year: Date.today.year - 5,
+                              order: [ :year, :month, :day] %>
 
     </div>
     <div class='col-md-3'>
@@ -26,10 +28,10 @@
       <%= f.input :notes, as: :text, label: 'Comentarios' %>
     </div>
     <div class='col-md-3'>
-      <%=f.input :gymsite_id, label: 'Gimnasio'%>
-    <%= f.input :membership_type,label: 'Tipo de Afiliación',selected: 2 %>
+      <%=f.association :gymsite, selected: 1, include_blank: false, label: "Seleccionar Gimnasio"  %>
+    <%= f.input :membership_type, selected: 3, label: 'Tipo de Afiliación' %>
     <%= f.input :membership_price, label: 'Valor de la Afiliación' %>
-    <%= f.input :level, label: 'Nivel de Experiencia', selected: 1 %>
+    <%= f.input :level, label: 'Nivel de Experiencia', selected: 3 %>
     <%= f.input :from_date, label: 'Fecha de Inicio' %>
 
     <%= f.button :submit %>

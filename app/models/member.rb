@@ -28,8 +28,8 @@
 #
 
 class Member < ApplicationRecord
-   extend Enumerize
-   has_one_attached :avatar
+  extend Enumerize
+  has_one_attached :avatar
   belongs_to :gymsite
   has_many :schedules#, through: :gymsites
   #has_many :training_sessions
