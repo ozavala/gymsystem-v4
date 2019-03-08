@@ -2,23 +2,23 @@
   <div class= 'row'>
     <div class= 'col-sm-3'></div>
     <div class = 'col-sm-6'>
-      <h3> Accounting Settings </h3>
+      <h3> Ajustes de la Contabilidad </h3>
       <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "alert alert-info" %>
       <% end %>
 
         <table>
-        <tr><td><%= link_to 'Edit the Gym Site',edit_settings_gymsites_path %></td></tr>
-        <tr><td><%= link_to 'Edit Chart Of Accounts', new_gl_account_path %></td></tr>
+        <tr><td><%= link_to 'Editar datos del gimnasio',edit_settings_gymsites_path %></td></tr>
+        <tr><td><%= link_to 'Editar las cuentas del Libro Mayor', new_gl_account_path %></td></tr>
 
           <tr>
-            <td><a href="#">Make Chart of Accounts - html  <%GlAccountsHelper::create_chart_of_accounts_html%></a></td>
+            <td><a href="#">Crear el listado de cuentas del mayor - html  <%GlAccountsHelper::create_chart_of_accounts_html%></a></td>
           </tr>
           <tr>
-            <td><%=link_to 'Chart of Accounts List (html)',reports_gl_accounts_list_path %></td>
+            <td><%=link_to 'Listar las cuentas del libro mayor:formato (html)',reports_gl_accounts_list_path %></td>
           </tr>
           <tr>
-              <td><%= link_to "Chart of Accounts List (PDF)", accounting_reports_index_path( format: 'pdf') %></td>
+              <td><%= link_to "Listar las cuentas del mayor: formato (PDF)", accounting_reports_index_path( format: 'pdf') %></td>
           </tr>
 
           <tr><td><a href='#'>Edit General Ledger Accounts</a></td></tr>

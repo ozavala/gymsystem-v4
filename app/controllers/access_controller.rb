@@ -1,6 +1,6 @@
 class AccessController < ApplicationController
 
-  
+
 
   def show
   end
@@ -14,5 +14,8 @@ class AccessController < ApplicationController
 
   def week_calendar
     @schedules = Schedule.all
+  end
+  def registro_miembros
+    @members = Member.all
   end
 end

@@ -13,7 +13,6 @@
 #
 
 class TrainingSession < ApplicationRecord
-  belongs_to :member
-  belongs_to :gymsite
+  belongs_to :schedule
   has_many :workouts
 end

@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'reports/gl_accounts_list'
   get 'access/reports/index'
   get 'accounting/reports/index'
+  get 'accounting/reports/menu'
+  get 'access/registro_miembros'
   namespace :accounting do
     resource :reports
     resource :settings
@@ -37,11 +39,14 @@ Rails.application.routes.draw do
     namespace :settings do
       resources :gl_accounts
       resource :gymsites, only: [:edit, :update]
-
-      resource :members, only: [:edit, :update], as: 'member'
+      # resource :members, only: [:edit, :update], as: 'member'
       resource :users, except: [:show]
   end
   resources :members
+   get 'active_members', to: 'members#active_members'
+  get 'inactive_members', to: 'members#inactive_members'
+
+
   devise_for :users
   resources :gymsites
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

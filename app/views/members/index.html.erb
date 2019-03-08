@@ -1,0 +1,28 @@
+
+<table>
+  <th> Nombres </th>
+  <th> Apellidos </th>
+  <th> Valor</th>
+  <th> Tipo de Afiliación</th>
+  <th> Nivel</th>
+  <th> Activo</th>
+  <th> Fecha de Inicio Date</th>
+  <th> Fecha de Salida</th>
+  
+<%  @members.each do |member| %>
+<tr>
+  <td><%= member.first_name %></td>
+  <td><%= member.last_name %></td>
+  <td><%= member.membership_price %></td>
+  <td><%= member.membership_type %></td>
+  <td><%= member.level %></td>
+  <td><%= member.is_active %></td>
+  <td><%= member.from_date %></td>
+  <td><%= member.to_date %></td>
+  </tr>
+  <% end %>
+  </table>
+
+  <li><%=link_to 'Ver miembros activos', active_members_path %></li>
+  <li><%= link_to 'Ver miembros inactivos', inactive_members_path %></li>
+  <li><%= link_to 'Nuevo miembro', new_member_path%></li>

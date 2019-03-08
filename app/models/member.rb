@@ -29,13 +29,22 @@
 
 class Member < ApplicationRecord
    extend Enumerize
+   has_one_attached :avatar
   belongs_to :gymsite
-  has_many :schedules, through: :gymsites
-  has_many :billing_accounts
-  has_many :training_sessions
+  has_many :schedules#, through: :gymsites
+  #has_many :training_sessions
+  #has_many :billing_accounts
+  default_scope {order(id: :asc)}
+  scope :active_members, -> {where(is_active: true)}
+  scope :inactive_members, -> {where(is_active: false)}
 
-  enumerize :membership_type, in: {:weekly => 1, :monthly => 2, :annual => 3, :visit => 4}
-  enumerize :level, in: {:beginner => 1, :intermediate => 2, :advanced => 3, :professional => 4}
-  enumerize :source, in: {:Facebook => 1, :Instagram => 2, :Presence => 3, :Webpage => 4, :Referral =>5}
-  #enumerize :source, in: [:Facebook , :Instagram , :Presence , :Webpage , :Referral ]
+  enumerize :membership_type, in: {:Cortesía => 0, :Semanal => 1, :Mensual => 2, :Anual => 3, :Visita => 4}
+  enumerize :level, in: {:Visitante => 0,:Principiante => 1, :Intermedio => 2, :Avanzado => 3, :Profesional => 4}
+  enumerize :source, in: {:Facebook => 1, :Instagram => 2, :Presencial => 3, :Sitio_Web => 4, :Referencial =>5}
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true, uniqueness: true
+
+  validates :password_digest, presence: true, length: {minimum: 6, maximum: 30}
 end

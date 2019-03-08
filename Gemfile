@@ -69,6 +69,10 @@ group :development do
   gem 'prawn-table', '~> 0.2.2'
   gem 'rails-erd', '~> 1.5', '>= 1.5.2'
   gem 'annotate'
+  gem 'kaminari'
+  gem 'font-awesome-rails'
+  gem 'mini_magick'
+  gem 'image_processing', '~> 1.2'
 end
 
 group :test do

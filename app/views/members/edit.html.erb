@@ -1,0 +1,40 @@
+
+<div class='container-fluid'>
+  <h2> Editar Datos del Afiliado </h2>
+  <div class='row'>
+    <div class='col-md-2'>
+      <%= simple_form_for @member do |f| %>
+        <div class="wrapper">
+        <%=image_tag("user_font_awesome-band.png", size: "150x150", alt: "Edit Entry")%>
+        <%=f.input :avatar, as: :file, label: "Avatar"%>
+      </div>
+    </div>
+    <div class='col-md-3'>
+
+<%= f.input :first_name,label: 'Nombres' %>
+<%= f.input :last_name,label: 'Apellidos' %>
+<%= f.input :email,label: 'Email' %>
+
+<%= f.input :password_digest,label: 'Código' %>
+<%= f.hint 'Mínimo 6 caracteres'%>
+
+    </div>
+    <div class='col-md-3'>
+      <%= f.input :street_address,label: 'Dirección' %>
+      <%= f.input :city,label: 'Ciudad' %>
+      <%= f.input :state,label: 'Provincia' %>
+      <%= f.input :zip,label: 'Código Postal' %>
+      <%= f.input :notes, as: :text, label: 'Comentarios' %>
+    </div>
+    <div class='col-md-3'>
+    <%= f.input :membership_type,label: 'Tipo de Afiliación',selected: 2 %>
+    <%= f.input :membership_price, label: 'Valor de la Afiliación' %>
+    <%= f.input :level, label: 'Nivel de Experiencia', selected: 1 %>
+    <%= f.input :from_date, label: 'Fecha de Inicio' %>
+
+    <%= f.button :submit %>
+    </div>
+
+<% end %>
+</div>
+</div>

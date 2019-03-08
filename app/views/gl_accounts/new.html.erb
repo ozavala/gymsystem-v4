@@ -8,25 +8,14 @@
     <div class= 'col-md-2'></div>
     <div class= 'col-md-9'>
 
-      <%= form_with model: GlAccount.new do |f| %>
-      <p>
-      <%= label(:gl_account, :acc_code, 'Account Code')%>
-      <%= f.text_field :acc_code%></p>
-      <p>
-      <%= label(:gl_account, :acc_parent_code, 'Account Parent Code')%>
-      <%= f.text_field :acc_parent_code%></p>
-      <p>
-      <%= label(:gl_account, :name, 'Account Name')%>
-      <%= f.text_field :name %></p>
-      <p>
-      <%= label(:gl_account, :description, 'Description')%>
-      <%= f.text_field :description %></p>
-      <p>
-      <%= label(:gl_account, :account_type_id, 'Account Type')%>
-      <%= f.text_field :account_type_id %></p>
-
-      <%= f.button %>
-      <% end %>
+    <%= simple_form_for @gl_account do |f|%>
+    <%= f.input :account_type_id, selected: 1 %>
+    <%= f.input :acc_code, label: 'Account Code' %>
+    <%= f.input :acc_parent_code, label: 'Parent Account Code' %>
+    <%= f.input :name,label: 'Account Name' %>
+    <%= f.input :description, as: :text, label: 'Description'%>
+    <%= f.button :submit %>
+    <% end %>
 
 
     </div>

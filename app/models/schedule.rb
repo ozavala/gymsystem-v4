@@ -15,6 +15,8 @@
 class Schedule < ApplicationRecord
   belongs_to :trainer
   belongs_to :gymsite
+  belongs_to :member
+  has_many :training_sessions
   default_scope {order(start_time: :asc)}
 
 end

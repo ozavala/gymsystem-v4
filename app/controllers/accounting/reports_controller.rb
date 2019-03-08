@@ -1,6 +1,7 @@
 module Accounting
   class ReportsController < ApplicationController
-
+    def menu
+    end 
     def index
       @accounts = GlAccount.all
       respond_to do |format|

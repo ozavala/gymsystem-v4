@@ -3,8 +3,8 @@
     <%= link_to image_tag( 'icon-logo-fer1.png', alt: 'logo'), access_menu_path, class: 'navbar-brand'%>
     <span class= "navbar-link">
       <% if user_signed_in? && current_user.is_admin?%>
-      <%= link_to "Admin Dash Board", admin_users_path %>
-     <%=link_to 'General Ledger', accounting_reports_index_path %>
+      <%= link_to "Panel de Administración", admin_users_path %>
+     <%=link_to 'Contabilidad', accounting_reports_index_path %>
       <% end %>
     </span>
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -15,8 +15,9 @@
       </button>
   <div id="navbar" class="navbar-collapse collapse " >
     <ul class="nav navbar-nav mx-auto">
-      <li class="nav-item" role="presentation"><a class="nav-link active" href="menu">Inicio</a></li>
+      <li class="nav-item" role="presentation"><%= link_to 'Inicio', access_menu_path %></li>
       <li class="nav-item" role="presentation"><%= link_to 'Calendario de Actividades', access_week_calendar_path %></li>
+      <li class="nav-item" role="presentation"><%= link_to ' Registrarse', members_path %></li>
       <li class="nav-item" role="presentation"><a class="nav-link" href="#">Tienda</a></li>
       <li class="nav-item" role="presentation"><a class="nav-link" <%=link_to 'Blog', access_blog_path %></a> </li>
     </ul>

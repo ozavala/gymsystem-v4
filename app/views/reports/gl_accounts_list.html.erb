@@ -1,645 +1,745 @@
 <div class = 'container'>
-          <h1>General Ledger Chart of Accounts</h1>
+          <h1>Listado de Cuentas del Libro Mayor</h1>
+        </div>
 <div class='row'>
-          <div class = 'col-md-1'>
-          </div>
+          <div class = 'col-md-1'></div>
           <div class='col-md-10'>
-          <table>
+          <table class='table table-hover'>
+          <thead class='table-header'>
             <tr>
-              <th>ID</th>
-              <th>Code</th>
-              <th>Name</th>
-              <th>Account Type</th>
+              <th>#</th>
+              <th>Código</th>
+              <th>Cta. Padre</th>
+              <th>Nombre</th>
+              <th>Tipo</th>
               <th>Description</th>
-            </tr>
-<tr>
-             <td>1   </td>
-             <td>  1</td>
+            </tr><thead>
+<tbody><tr>
+             <td> 1</td>
+             <td> 1</td>
+             <td> </td>
              <td>Activos</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Valores disponibles,activos de la empresa</td>
           </tr>
-<tr>
-             <td>2   </td>
-             <td>  1000</td>
+<tbody><tr>
+             <td> 2</td>
+             <td> 1000</td>
+             <td> 1</td>
              <td>Activos Corrientes</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Valores disponibles,activos de la empresa</td>
           </tr>
-<tr>
-             <td>3   </td>
-             <td>  1010</td>
+<tbody><tr>
+             <td> 3</td>
+             <td> 1010</td>
+             <td> 1000</td>
              <td>Caja</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Dinero efectivo del que se dispone</td>
           </tr>
-<tr>
-             <td>4   </td>
-             <td>  1011</td>
+<tbody><tr>
+             <td> 4</td>
+             <td> 1011</td>
+             <td> 1010</td>
              <td>Caja Chica</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Dinero en efectivo para gastos varios o para apertura de caja de venta</td>
           </tr>
-<tr>
-             <td>5   </td>
-             <td>  1012</td>
+<tbody><tr>
+             <td> 5</td>
+             <td> 1012</td>
+             <td> 1010</td>
              <td>Valores a depositar</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Cheques para depositar, cheques en cartera</td>
           </tr>
-<tr>
-             <td>6   </td>
-             <td>  1013</td>
+<tbody><tr>
+             <td> 6</td>
+             <td> 1013</td>
+             <td> 1010</td>
              <td>Valores Diferidos a Depositar</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Cheques que no pueden depositarse o cobrarse, diferidos a fecha</td>
           </tr>
-<tr>
-             <td>7   </td>
-             <td>  1020</td>
+<tbody><tr>
+             <td> 7</td>
+             <td> 1020</td>
+             <td> 1000</td>
              <td>Bancos</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Cuentas de Bancos</td>
           </tr>
-<tr>
-             <td>8   </td>
-             <td>  1021</td>
+<tbody><tr>
+             <td> 8</td>
+             <td> 1021</td>
+             <td> 1020</td>
              <td>Banco Bolivariano</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Cta  cte de Banco No. 023456</td>
           </tr>
-<tr>
-             <td>9   </td>
-             <td>  1022</td>
+<tbody><tr>
+             <td> 9</td>
+             <td> 1022</td>
+             <td> 1020</td>
              <td>Banco Bolivariano</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Cta de Ahorro No. 023456</td>
           </tr>
-<tr>
-             <td>10   </td>
-             <td>  1200</td>
+<tbody><tr>
+             <td> 10</td>
+             <td> 1200</td>
+             <td> 1000</td>
              <td>Inventario</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Inventarios de productos y servicios</td>
           </tr>
-<tr>
-             <td>11   </td>
-             <td>  1210</td>
+<tbody><tr>
+             <td> 11</td>
+             <td> 1210</td>
+             <td> 1200</td>
              <td>Inventario Productos</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Artículos para la venta</td>
           </tr>
-<tr>
-             <td>12   </td>
-             <td>  1220</td>
+<tbody><tr>
+             <td> 12</td>
+             <td> 1220</td>
+             <td> 1200</td>
              <td>Mercader´ias en Tránsito</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Mercadería comprada no ingresada</td>
           </tr>
-<tr>
-             <td>13   </td>
-             <td>  1400</td>
+<tbody><tr>
+             <td> 13</td>
+             <td> 1400</td>
+             <td> 1000</td>
              <td>Cuentas por Cobrar</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Cuentas por cobrar</td>
           </tr>
-<tr>
-             <td>14   </td>
-             <td>  1410</td>
+<tbody><tr>
+             <td> 14</td>
+             <td> 1410</td>
+             <td> 1400</td>
              <td>Clientes o Deudores por Ventas</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Valores no documentados por ventas productos o servicios</td>
           </tr>
-<tr>
-             <td>89   </td>
-             <td>  1410-001</td>
+<tbody><tr>
+             <td> 89</td>
+             <td> 1410-001</td>
+             <td> 1410</td>
              <td>Julio Fuertes</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Pago mensual membresía</td>
           </tr>
-<tr>
-             <td>88   </td>
-             <td>  1410-002</td>
+<tbody><tr>
+             <td> 88</td>
+             <td> 1410-002</td>
+             <td> 1410</td>
              <td>Julio Santos</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Pago anual membresía</td>
           </tr>
-<tr>
-             <td>90   </td>
-             <td>  1410-003</td>
+<tbody><tr>
+             <td> 90</td>
+             <td> 1410-003</td>
+             <td> 1410</td>
              <td>Roberto Palacios</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Pago anual membresía</td>
           </tr>
-<tr>
-             <td>15   </td>
-             <td>  1420</td>
+<tbody><tr>
+             <td> 15</td>
+             <td> 1420</td>
+             <td> 1400</td>
              <td>Deudores Varios</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Deudas por cobrar diferentes, préstamos a empleados, otros</td>
           </tr>
-<tr>
-             <td>16   </td>
-             <td>  1430</td>
+<tbody><tr>
+             <td> 16</td>
+             <td> 1430</td>
+             <td> 1400</td>
              <td>Documentos por Cobrar- Corto Plazo</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Pagarés firmados por terceros a favor de la empresa, corto plazo</td>
           </tr>
-<tr>
-             <td>17   </td>
-             <td>  1500</td>
+<tbody><tr>
+             <td> 17</td>
+             <td> 1500</td>
+             <td> 1000</td>
              <td>Anticipos</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Anticipos y depósitos pagados por anticipado</td>
           </tr>
-<tr>
-             <td>18   </td>
-             <td>  1501</td>
+<tbody><tr>
+             <td> 18</td>
+             <td> 1501</td>
+             <td> 1500</td>
              <td>Arriendos Anticipados</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Anticipos de arriendo por anticipado</td>
           </tr>
-<tr>
-             <td>19   </td>
-             <td>  1510</td>
+<tbody><tr>
+             <td> 19</td>
+             <td> 1510</td>
+             <td> 1500</td>
              <td>Anticipo a Proveedores</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Anticipos de arriendo por anticipado</td>
           </tr>
-<tr>
-             <td>20   </td>
-             <td>  1590</td>
+<tbody><tr>
+             <td> 20</td>
+             <td> 1590</td>
+             <td> 1500</td>
              <td>IVA Crédito Fiscal</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>IVA pagado en compras a ser descontado del IVA Débito Fiscal</td>
           </tr>
-<tr>
-             <td>21   </td>
-             <td>  1600</td>
+<tbody><tr>
+             <td> 21</td>
+             <td> 1600</td>
+             <td> 1000</td>
              <td>Activos No Corrientes</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Activos No realizables de inmediato</td>
           </tr>
-<tr>
-             <td>22   </td>
-             <td>  1610</td>
+<tbody><tr>
+             <td> 22</td>
+             <td> 1610</td>
+             <td> 1600</td>
              <td>Equipos y Maquinarias</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Equipos para la operación</td>
           </tr>
-<tr>
-             <td>23   </td>
-             <td>  1620</td>
+<tbody><tr>
+             <td> 23</td>
+             <td> 1620</td>
+             <td> 1600</td>
              <td>Instalaciones</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Instalaciones y adecuaciones</td>
           </tr>
-<tr>
-             <td>24   </td>
-             <td>  1630</td>
+<tbody><tr>
+             <td> 24</td>
+             <td> 1630</td>
+             <td> 1600</td>
              <td>Muebles y Enseres</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Muebles de oficina y eneseres</td>
           </tr>
-<tr>
-             <td>25   </td>
-             <td>  1640</td>
+<tbody><tr>
+             <td> 25</td>
+             <td> 1640</td>
+             <td> 1600</td>
              <td>Repuestos y Herramientas</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Repuestos y herramientas comprados</td>
           </tr>
-<tr>
-             <td>26   </td>
-             <td>  1650</td>
+<tbody><tr>
+             <td> 26</td>
+             <td> 1650</td>
+             <td> 1600</td>
              <td>Otras Propiedades Equipos</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Otros equipos propiedad de la empresa</td>
           </tr>
-<tr>
-             <td>28   </td>
-             <td>  1660</td>
+<tbody><tr>
+             <td> 28</td>
+             <td> 1660</td>
+             <td> 1600</td>
              <td>(-)Provisión Cuentas Incobrables</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Provisión por cuentas incobrables</td>
           </tr>
-<tr>
-             <td>27   </td>
-             <td>  1660</td>
+<tbody><tr>
+             <td> 27</td>
+             <td> 1660</td>
+             <td> 1600</td>
              <td>Documentos y Cuentas por Cobrar</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Documentos de largo plazo por cobrar</td>
           </tr>
-<tr>
-             <td>29   </td>
-             <td>  1760</td>
+<tbody><tr>
+             <td> 29</td>
+             <td> 1760</td>
+             <td> 1600</td>
              <td>Depreciación Acumulada</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Repuestos y herramientas comprados</td>
           </tr>
-<tr>
-             <td>30   </td>
-             <td>  1770</td>
+<tbody><tr>
+             <td> 30</td>
+             <td> 1770</td>
+             <td> 1600</td>
              <td>Deterioro Acumulado</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Repuestos y herramientas comprados</td>
           </tr>
-<tr>
-             <td>31   </td>
-             <td>  1800</td>
+<tbody><tr>
+             <td> 31</td>
+             <td> 1800</td>
+             <td> 1000</td>
              <td>Activos Intangibles</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Valor del negocion en marcha</td>
           </tr>
-<tr>
-             <td>32   </td>
-             <td>  1810</td>
+<tbody><tr>
+             <td> 32</td>
+             <td> 1810</td>
+             <td> 1800</td>
              <td>Derecho de Llave</td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Valor atribuído a la cesión del local antes del vencimiento del contrato</td>
           </tr>
-<tr>
-             <td>33   </td>
-             <td>  1820</td>
+<tbody><tr>
+             <td> 33</td>
+             <td> 1820</td>
+             <td> 1800</td>
              <td>Derecho de marca </td>
-             <td>1</td>
+             <td>Activo</td>
              <td>Valor del negocion en marcha</td>
           </tr>
-<tr>
-             <td>34   </td>
-             <td>  2</td>
+<tbody><tr>
+             <td> 94</td>
+             <td> 1999</td>
+             <td> 1990</td>
+             <td>TEST ACCOUNT</td>
+             <td>Activo</td>
+             <td>TESTING ACCOUNT</td>
+          </tr>
+<tbody><tr>
+             <td> 34</td>
+             <td> 2</td>
+             <td> </td>
              <td>Pasivos</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben </td>
           </tr>
-<tr>
-             <td>35   </td>
-             <td>  2000</td>
+<tbody><tr>
+             <td> 35</td>
+             <td> 2000</td>
+             <td> 2</td>
              <td>Pasivos Corrientes</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores de pago corriente</td>
           </tr>
-<tr>
-             <td>36   </td>
-             <td>  2100</td>
+<tbody><tr>
+             <td> 36</td>
+             <td> 2100</td>
+             <td> 2000</td>
              <td>Cuentas y Documentos por Pagar</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben pagar en el corto plazo</td>
           </tr>
-<tr>
-             <td>37   </td>
-             <td>  2110</td>
+<tbody><tr>
+             <td> 37</td>
+             <td> 2110</td>
+             <td> 2100</td>
              <td>Locales</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben pagar en el país</td>
           </tr>
-<tr>
-             <td>39   </td>
-             <td>  2110</td>
+<tbody><tr>
+             <td> 39</td>
+             <td> 2110</td>
+             <td> 2100</td>
              <td>Obligaciones Con Instituciones Financieras</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben pagar a instituciones financieras</td>
           </tr>
-<tr>
-             <td>38   </td>
-             <td>  2120</td>
+<tbody><tr>
+             <td> 38</td>
+             <td> 2120</td>
+             <td> 2100</td>
              <td>Del Exteriors</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben pagar exterior</td>
           </tr>
-<tr>
-             <td>40   </td>
-             <td>  2200</td>
+<tbody><tr>
+             <td> 40</td>
+             <td> 2200</td>
+             <td> 2000</td>
              <td>Obligaciones Tributarias</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben  a institucion Tributarias</td>
           </tr>
-<tr>
-             <td>41   </td>
-             <td>  2210</td>
+<tbody><tr>
+             <td> 41</td>
+             <td> 2210</td>
+             <td> 2200</td>
              <td>IVA a Pagar</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>IVA cobrado por facturación de servicios </td>
           </tr>
-<tr>
-             <td>42   </td>
-             <td>  2220</td>
+<tbody><tr>
+             <td> 42</td>
+             <td> 2220</td>
+             <td> 2200</td>
              <td>Impuesto a la Renta del Ejercicio</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valor que se debepor concepto del impuesto a la renta</td>
           </tr>
-<tr>
-             <td>43   </td>
-             <td>  2230</td>
+<tbody><tr>
+             <td> 43</td>
+             <td> 2230</td>
+             <td> 2200</td>
              <td>Con el IESS</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben  al IESS</td>
           </tr>
-<tr>
-             <td>44   </td>
-             <td>  2240</td>
+<tbody><tr>
+             <td> 44</td>
+             <td> 2240</td>
+             <td> 2200</td>
              <td>Beneficios de Ley a Empleados</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben a empleados</td>
           </tr>
-<tr>
-             <td>45   </td>
-             <td>  2250</td>
+<tbody><tr>
+             <td> 45</td>
+             <td> 2250</td>
+             <td> 2200</td>
              <td>Participación de Empleados por Pagar</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben por utilidades</td>
           </tr>
-<tr>
-             <td>46   </td>
-             <td>  2260</td>
+<tbody><tr>
+             <td> 46</td>
+             <td> 2260</td>
+             <td> 2200</td>
              <td>Dividendos Por Pagar</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores que se deben a institución tributaria</td>
           </tr>
-<tr>
-             <td>47   </td>
-             <td>  2300</td>
+<tbody><tr>
+             <td> 47</td>
+             <td> 2300</td>
+             <td> 2000</td>
              <td>Pasivo No Corriente</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores a pagarse en mediano y largo plazo</td>
           </tr>
-<tr>
-             <td>49   </td>
-             <td>  2310</td>
+<tbody><tr>
+             <td> 49</td>
+             <td> 2310</td>
+             <td> 2300</td>
              <td>Cuentas y Documentos a Pagar</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores a pagarse en mediano y largo plazo</td>
           </tr>
-<tr>
-             <td>48   </td>
-             <td>  2310</td>
+<tbody><tr>
+             <td> 48</td>
+             <td> 2310</td>
+             <td> 2300</td>
              <td>Cuentas y Documentos a Pagar</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores a pagarse en mediano y largo plazo</td>
           </tr>
-<tr>
-             <td>50   </td>
-             <td>  2320</td>
+<tbody><tr>
+             <td> 50</td>
+             <td> 2320</td>
+             <td> 2300</td>
              <td>Anticipo de Clientes</td>
-             <td>2</td>
+             <td>Pasivo</td>
              <td>Valores pagados por anticipado de clientes</td>
           </tr>
-<tr>
-             <td>51   </td>
-             <td>  3</td>
+<tbody><tr>
+             <td> 51</td>
+             <td> 3</td>
+             <td> </td>
              <td>Capital </td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Valores para iniciar el negocio</td>
           </tr>
-<tr>
-             <td>52   </td>
-             <td>  3000</td>
+<tbody><tr>
+             <td> 52</td>
+             <td> 3000</td>
+             <td> 3</td>
              <td>Capital Social </td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Cuentas de Capital Social</td>
           </tr>
-<tr>
-             <td>53   </td>
-             <td>  3010</td>
+<tbody><tr>
+             <td> 53</td>
+             <td> 3010</td>
+             <td> 3000</td>
              <td>Capital Suscrito </td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Capital nominal</td>
           </tr>
-<tr>
-             <td>54   </td>
-             <td>  3020</td>
+<tbody><tr>
+             <td> 54</td>
+             <td> 3020</td>
+             <td> 3000</td>
              <td>(-)Capital Suscrito No Pagado </td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Cuentas de accionistas</td>
           </tr>
-<tr>
-             <td>55   </td>
-             <td>  3030</td>
+<tbody><tr>
+             <td> 55</td>
+             <td> 3030</td>
+             <td> 3000</td>
              <td>Aporte de Socios Capitalizaciones</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Cuentas de aporte de socios para futuras capitalizaciones</td>
           </tr>
-<tr>
-             <td>56   </td>
-             <td>  3100</td>
+<tbody><tr>
+             <td> 56</td>
+             <td> 3100</td>
+             <td> 3000</td>
              <td>Reservas</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Utilidades retenidas para reinversión</td>
           </tr>
-<tr>
-             <td>57   </td>
-             <td>  3110</td>
+<tbody><tr>
+             <td> 57</td>
+             <td> 3110</td>
+             <td> 3100</td>
              <td>Reserva Legal</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Reserva legal</td>
           </tr>
-<tr>
-             <td>58   </td>
-             <td>  3120</td>
+<tbody><tr>
+             <td> 58</td>
+             <td> 3120</td>
+             <td> 3100</td>
              <td>Reserva Facultativa</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Reserva legal</td>
           </tr>
-<tr>
-             <td>59   </td>
-             <td>  3200</td>
+<tbody><tr>
+             <td> 59</td>
+             <td> 3200</td>
+             <td> 3000</td>
              <td>Resultados Acumulados</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Pérdidas o Ganacias en el ejercicio</td>
           </tr>
-<tr>
-             <td>60   </td>
-             <td>  3210</td>
+<tbody><tr>
+             <td> 60</td>
+             <td> 3210</td>
+             <td> 3200</td>
              <td>Ganacias Acumuladas</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Ganacias acumuladas en el ejercicio anterior</td>
           </tr>
-<tr>
-             <td>61   </td>
-             <td>  3220</td>
+<tbody><tr>
+             <td> 61</td>
+             <td> 3220</td>
+             <td> 3200</td>
              <td>(-)Pérdidas Acumuladas</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Pérdidas acumuladas en el ejercicio anterior</td>
           </tr>
-<tr>
-             <td>62   </td>
-             <td>  3300</td>
+<tbody><tr>
+             <td> 62</td>
+             <td> 3300</td>
+             <td> 3000</td>
              <td>Resultado del Ejercicio</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Pérdidas o Ganacias en el ejercicio</td>
           </tr>
-<tr>
-             <td>63   </td>
-             <td>  3310</td>
+<tbody><tr>
+             <td> 63</td>
+             <td> 3310</td>
+             <td> 3300</td>
              <td>Ganancia Neta del Periodo</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Pérdidas o Ganacias en el ejercicio</td>
           </tr>
-<tr>
-             <td>64   </td>
-             <td>  3320</td>
+<tbody><tr>
+             <td> 64</td>
+             <td> 3320</td>
+             <td> 3300</td>
              <td>(-)Pérdida Neta del Periodo</td>
-             <td>3</td>
+             <td>Capital</td>
              <td>Pérdidas o Ganacias en el ejercicio</td>
           </tr>
-<tr>
-             <td>65   </td>
-             <td>  4</td>
+<tbody><tr>
+             <td> 65</td>
+             <td> 4</td>
+             <td> </td>
              <td>Ingresos</td>
-             <td>4</td>
-             <td>Ingresos</td>
-          </tr>
-<tr>
-             <td>66   </td>
-             <td>  4000</td>
-             <td>Ingresos Varios</td>
-             <td>4</td>
+             <td>Ingreso</td>
              <td>Ingresos</td>
           </tr>
-<tr>
-             <td>67   </td>
-             <td>  4100</td>
+<tbody><tr>
+             <td> 66</td>
+             <td> 4000</td>
+             <td> 4</td>
              <td>Ingresos Varios</td>
-             <td>4</td>
+             <td>Ingreso</td>
+             <td>Ingresos</td>
+          </tr>
+<tbody><tr>
+             <td> 67</td>
+             <td> 4100</td>
+             <td> 4000</td>
+             <td>Ingresos Varios</td>
+             <td>Ingreso</td>
              <td>Ingresos ordinarios</td>
           </tr>
-<tr>
-             <td>68   </td>
-             <td>  4110</td>
+<tbody><tr>
+             <td> 68</td>
+             <td> 4110</td>
+             <td> 4100</td>
              <td>Venta de Membresías</td>
-             <td>4</td>
+             <td>Ingreso</td>
              <td>Ingresos obtenidos de las ventas de membresía</td>
           </tr>
-<tr>
-             <td>69   </td>
-             <td>  4120</td>
+<tbody><tr>
+             <td> 69</td>
+             <td> 4120</td>
+             <td> 4100</td>
              <td>Venta de Servicios</td>
-             <td>4</td>
+             <td>Ingreso</td>
              <td>Venta de servicios</td>
           </tr>
-<tr>
-             <td>70   </td>
-             <td>  4130</td>
+<tbody><tr>
+             <td> 70</td>
+             <td> 4130</td>
+             <td> 4100</td>
              <td>Ingresos por Publicidad</td>
-             <td>4</td>
+             <td>Ingreso</td>
              <td>Venta de publicidad</td>
           </tr>
-<tr>
-             <td>71   </td>
-             <td>  4140</td>
+<tbody><tr>
+             <td> 71</td>
+             <td> 4140</td>
+             <td> 4100</td>
              <td>Ingresos por Regalías</td>
-             <td>4</td>
+             <td>Ingreso</td>
              <td>Venta de publicidad</td>
           </tr>
-<tr>
-             <td>72   </td>
-             <td>  4200</td>
+<tbody><tr>
+             <td> 72</td>
+             <td> 4200</td>
+             <td> 4</td>
              <td>Otros Ingresos</td>
-             <td>4</td>
+             <td>Ingreso</td>
              <td>Otros Ingresos</td>
           </tr>
-<tr>
-             <td>73   </td>
-             <td>  4210</td>
+<tbody><tr>
+             <td> 73</td>
+             <td> 4210</td>
+             <td> 4200</td>
              <td>Intereses financieros</td>
-             <td>4</td>
+             <td>Ingreso</td>
              <td>Ingreso de intereses finacieros</td>
           </tr>
-<tr>
-             <td>74   </td>
-             <td>  5</td>
+<tbody><tr>
+             <td> 74</td>
+             <td> 5</td>
+             <td> </td>
              <td>Gastos</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Gastos Operacionales</td>
           </tr>
-<tr>
-             <td>75   </td>
-             <td>  5000</td>
+<tbody><tr>
+             <td> 75</td>
+             <td> 5000</td>
+             <td> 5</td>
              <td>Gastos de Operación</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Gastos Operacionales</td>
           </tr>
-<tr>
-             <td>76   </td>
-             <td>  5010</td>
+<tbody><tr>
+             <td> 76</td>
+             <td> 5010</td>
+             <td> 5000</td>
              <td>Comisiones por Ventas</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Comisiones pagadas</td>
           </tr>
-<tr>
-             <td>77   </td>
-             <td>  5020</td>
+<tbody><tr>
+             <td> 77</td>
+             <td> 5020</td>
+             <td> 5000</td>
              <td>Promoción de Ventas</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Costo de promociones</td>
           </tr>
-<tr>
-             <td>78   </td>
-             <td>  5030</td>
+<tbody><tr>
+             <td> 78</td>
+             <td> 5030</td>
+             <td> 5000</td>
              <td>Publicidad</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Costo de publicidad</td>
           </tr>
-<tr>
-             <td>79   </td>
-             <td>  5040</td>
+<tbody><tr>
+             <td> 79</td>
+             <td> 5040</td>
+             <td> 5000</td>
              <td>Gasto de Mercadeo</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Costo de marketing</td>
           </tr>
-<tr>
-             <td>80   </td>
-             <td>  5200</td>
+<tbody><tr>
+             <td> 80</td>
+             <td> 5200</td>
+             <td> 5000</td>
              <td>Rol de Pagos</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Pagos de roles</td>
           </tr>
-<tr>
-             <td>81   </td>
-             <td>  5210</td>
+<tbody><tr>
+             <td> 81</td>
+             <td> 5210</td>
+             <td> 5000</td>
              <td>Labores Contratadas</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Labores externas contratadas</td>
           </tr>
-<tr>
-             <td>82   </td>
-             <td>  5280</td>
+<tbody><tr>
+             <td> 82</td>
+             <td> 5280</td>
+             <td> 5000</td>
              <td>Alquiler</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Alquiler</td>
           </tr>
-<tr>
-             <td>83   </td>
-             <td>  5281</td>
+<tbody><tr>
+             <td> 83</td>
+             <td> 5281</td>
+             <td> 5000</td>
              <td>Pago Alícuota</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Alícuotas por servicios</td>
           </tr>
-<tr>
-             <td>84   </td>
-             <td>  5300</td>
+<tbody><tr>
+             <td> 84</td>
+             <td> 5300</td>
+             <td> 5000</td>
              <td>Empresas de Servicios</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Costo de servicios elec. tel y agua</td>
           </tr>
-<tr>
-             <td>85   </td>
-             <td>  5310</td>
+<tbody><tr>
+             <td> 85</td>
+             <td> 5310</td>
+             <td> 5300</td>
              <td>Gasto de Agua</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Costo de servicios  agua</td>
           </tr>
-<tr>
-             <td>86   </td>
-             <td>  5320</td>
+<tbody><tr>
+             <td> 86</td>
+             <td> 5320</td>
+             <td> 5300</td>
              <td>Gasto de Electricidad</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Costo de servicios  energía eléctrica</td>
           </tr>
-<tr>
-             <td>87   </td>
-             <td>  5390</td>
+<tbody><tr>
+             <td> 87</td>
+             <td> 5390</td>
+             <td> 5300</td>
              <td>Servicios Profesionales</td>
-             <td>5</td>
+             <td>Gasto</td>
              <td>Servicios profesionales</td>
           </tr>
-</table></div></div></div>
+</tbody></table></div></div></div>
