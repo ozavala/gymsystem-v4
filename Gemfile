@@ -50,6 +50,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # custom
   gem 'bootstrap-sass', '~> 3.4.1'
+  gem 'autoprefixer-rails'
   gem 'sassc-rails', '>= 2.1.0'
   gem 'jquery-rails'
   gem 'devise', '~> 4.5'

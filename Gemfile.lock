@@ -340,6 +340,7 @@ DEPENDENCIES
   administrate-field-enumerize (~> 1.0)
   administrate-field-type
   annotate
+  autoprefixer-rails
   bootsnap (>= 1.1.0)
   bootstrap-datepicker-rails!
   bootstrap-sass (~> 3.4.1)
